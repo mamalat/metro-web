@@ -1,0 +1,9 @@
+{
+	"app_name": "Kyiv Metro",
+	"app_description": "This app is attempt to make traveling around Ukraine a bit easier, starting with Kyiv Metro and expanding. Firstly with Kyiv's metro (subway), and adding other cities and transport types in future updates.",
+	"app_language": "Language",
+	"app_app_store_download": "Download on the App Store",
+	"app_app_store_link": "https://apps.apple.com/us/app/metro-kyiv/id1469592307",
+	"app_back": "← Back",
+	"app_home_screenshot": "/screenshots/en/home.png"
+}

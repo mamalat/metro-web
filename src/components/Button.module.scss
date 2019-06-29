@@ -1,0 +1,19 @@
+@import 'css/variables.scss';
+
+.button {
+	border-radius: 0.25rem;
+	font-weight: 500;
+	cursor: pointer;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	border: 0;
+
+	color: $black;
+	background: $white;
+	box-shadow: 0 0.5rem 0.875rem rgba($black, 0.1);
+
+	&:focus {
+		outline: rgba($primary, 0.5) 0.125rem solid;
+		box-shadow: 0 0.5rem 0.875rem rgba($primary, 0.25);
+	}
+}

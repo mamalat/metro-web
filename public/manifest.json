@@ -1,0 +1,15 @@
+{
+  "short_name": "Kyiv Metro",
+  "name": "Making traveling around Kyiv a bit easier.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#40c1fa",
+  "background_color": "#edf5fb"
+}

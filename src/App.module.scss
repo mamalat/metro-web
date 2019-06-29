@@ -1,0 +1,27 @@
+@import 'css/variables.scss';
+@import-normalize;
+
+:global {
+	html, body, .root {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	body {
+		color: $black;
+		margin: 0;
+		font-family: 'Helvetica Neue', Helvetica;
+		background: $background;
+	}
+
+	a {
+		color: $primary;
+		text-underline-position: under;
+
+		&:focus {
+			outline: rgba($primary, 0.5) 0.1875rem solid;
+			outline-offset: 0.125rem;
+		}
+	}
+}

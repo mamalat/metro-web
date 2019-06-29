@@ -1,0 +1,60 @@
+{
+  "name": "metro-web",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "compression": "^1.7.4",
+    "custom-env": "^1.0.2",
+    "express": "^4.17.1",
+    "node-sass": "^4.12.0",
+    "spdy": "^4.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start --with-intl=full-icu",
+    "build": "react-scripts build --with-intl=full-icu",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "postbuild": "react-snap --with-intl=full-icu",
+    "server:start": "node index.js",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build:storybook": "build-storybook -s public"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "reactSnap": {
+    "skipThirdPartyRequests": true
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^5.1.9",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-backgrounds": "^5.1.9",
+    "@storybook/addon-centered": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addon-notes": "^5.1.9",
+    "@storybook/addon-viewport": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
+    "@storybook/react": "^5.1.9",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-intl": "^3.0.0-beta-8",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "react-snap": "^1.23.0",
+    "storybook-addon-intl": "^2.4.1",
+    "wouter": "^2.1.0"
+  }
+}

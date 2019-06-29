@@ -1,0 +1,79 @@
+@import 'css/variables.scss';
+
+.info {
+	padding: 2rem 2rem 0 2rem;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	text-align: left;
+}
+
+.heading {
+	margin: 0.5rem 0 0;
+	font-size: 2rem;
+}
+
+.description {
+	max-width: 20rem;
+	line-height: 1.4;
+}
+
+.appStore {
+	margin-top: 1rem;
+	display: flex;
+}
+
+.content {
+	padding: 2.5rem 0;
+	align-items: center;
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+}
+
+@media (max-width: 45rem) {
+	.info {
+		align-items: center;
+	}
+
+	.description {
+		max-width: 23.75rem;
+	}
+
+	.content {
+		flex-direction: column;
+	}
+}
+
+.wrapping {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	justify-content: space-around;
+}
+
+.privacyPolicy {
+	margin-bottom: 2.5rem;
+	outline: none;
+}
+
+.languages {
+	text-decoration: none;
+	font-weight: 500;
+	text-underline-position: under;
+	cursor: pointer;
+	color: $black;
+	margin-bottom: 1rem;
+	display: flex;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	img {
+		margin-right: 0.25rem;
+	}
+}

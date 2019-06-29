@@ -1,0 +1,40 @@
+@import 'css/variables.scss';
+
+.device {
+	position: relative;
+	max-width: 20rem;
+	width: 100%;
+
+	@media (max-width: 45rem) {
+		height: 22.5rem;
+		overflow: hidden;
+		box-shadow: 0 0.875rem 1.25rem rgba($black, 0.1);
+
+		&::after {
+			content: ' ';
+			position: absolute;
+			background: rgba($dark, 0.5);
+			height: 0.0625rem;
+			bottom: 0;
+			z-index: 2;
+			left: 0;
+			right: 0;
+		}
+	}
+
+	&Body {
+		z-index: 10;
+		width: inherit;
+		position: relative;
+	}
+
+	&Screen {
+		img {
+			position: absolute;
+			z-index: 1;
+			top: 1.0625rem;
+			left: 1.1875rem;
+			width: 88%;
+		}
+	}
+}

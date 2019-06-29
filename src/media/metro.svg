@@ -1,0 +1,17 @@
+<svg width="127px" height="76px" viewBox="0 0 127 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<polygon id="path-1" points="0 76 25.7432432 76 40.045045 47.641791 63.5 76 86.954955 47.641791 101.256757 76 127 76 89.2432432 0 63.5 35.1641791 37.7567568 0"></polygon>
+	</defs>
+	<g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g id="Desktop" transform="translate(-692.000000, -70.000000)">
+			<g id="Group-Copy-2" transform="translate(684.000000, 70.000000)">
+				<g id="Group-2" transform="translate(8.000000, 0.000000)">
+					<mask id="mask-2" fill="white">
+						<use xlink:href="#path-1"></use>
+					</mask>
+					<use id="path4178" fill="#53e69d" xlink:href="#path-1"></use>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

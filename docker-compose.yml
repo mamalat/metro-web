@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    image: "node:11.0.0"
+    user: "node"
+    working_dir: /home/node/app
+    volumes:
+      - /home/node/app:/home/node/app
+      - /etc/letsencrypt/archive/www.kyivmetro.com:/home/node/app/cert
+    ports:
+      - "80:5000"
+      - "443:5443"
+    command: "NODE_ENV=production yarn server:start"

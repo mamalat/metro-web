@@ -1,0 +1,16 @@
+@import 'css/variables.scss';
+
+.content {
+	padding: 1.5rem 2rem 4rem;
+	max-width: 38.75rem;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.back {
+	margin: 0 auto 2.5rem;
+	top: 1.5rem;
+	position: sticky;
+}
