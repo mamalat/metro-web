@@ -7,7 +7,7 @@ import { withA11y } from '@storybook/addon-a11y'
 
 import { FormattedMessage, injectIntl } from 'react-intl'
 
-import { Button, DevicePreview } from '../components'
+import { Button, Input, DevicePreview } from '../components'
 
 addDecorator(withA11y)
 addDecorator(centered)
@@ -35,4 +35,12 @@ storiesOf('Button', module)
 		<Button onClick={action('clicked')}>
 			<FormattedMessage id="app_back" />
 		</Button>
+	)
+
+storiesOf('Input', module)
+	.add('empty', () =>
+		<Input />
+	)
+	.add('with placeholder', () =>
+		<Input placeholder="Placeholder" />
 	)

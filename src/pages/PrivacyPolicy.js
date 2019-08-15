@@ -1,17 +1,19 @@
 import React, { PureComponent } from 'react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
-import { FormattedMessage } from 'react-intl'
+import { injectIntl, FormattedMessage } from 'react-intl'
 
 import { Button } from '../components'
 import styles from './PrivacyPolicy.module.scss'
 
-export default class LanguagesPage extends PureComponent {
+export default injectIntl(class PrivacyPolicyPage extends PureComponent {
 	render() {
+		const { intl } = this.props
+
 		return (
 			<div className={styles.content}>
 				<Helmet>
-					<title>Privacy Policy</title>
+					<title>{intl.formatMessage({ id: 'app_privacy_policy' })}</title>
 				</Helmet>
 
 				<Link tabIndex="-1" className={styles.back} to="/">
@@ -20,7 +22,9 @@ export default class LanguagesPage extends PureComponent {
 					</Button>
 				</Link>
 
-				<h1>Privacy Policy</h1>
+				<h1>
+					<FormattedMessage id="app_privacy_policy" />
+				</h1>
 
 				<p>Effective date: June 21, 2019</p>
 
@@ -126,4 +130,4 @@ export default class LanguagesPage extends PureComponent {
 			</div>
 		)
 	}
-}
+})

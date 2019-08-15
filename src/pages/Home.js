@@ -57,7 +57,9 @@ export default injectIntl(class HomePage extends Component {
 					to="/privacy-policy"
 					className={styles.privacyPolicy}
 				>
-					<Button>Privacy Policy</Button>
+					<Button>
+						<FormattedMessage id="app_privacy_policy" />
+					</Button>
 				</Link>
 			</div>
 		)

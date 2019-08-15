@@ -3,24 +3,47 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "apollo-boost": "^0.4.4",
+    "apollo-server-express": "^2.8.1",
+    "app-module-path": "^2.2.0",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
     "compression": "^1.7.4",
+    "cors": "^2.8.5",
     "custom-env": "^1.0.2",
     "express": "^4.17.1",
+    "graphql": "^14.4.0",
+    "intl-pluralrules": "^1.0.3",
+    "mongoose": "^5.6.9",
+    "morgan": "^1.9.1",
     "node-sass": "^4.12.0",
-    "spdy": "^4.0.0"
+    "react-apollo": "^3.0.1",
+    "react-app-polyfill": "^1.0.2",
+    "react-router": "^5.0.1",
+    "spdy": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start --with-intl=full-icu",
     "build": "react-scripts build --with-intl=full-icu",
+    "postbuild": "react-snap --with-intl=full-icu",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postbuild": "react-snap --with-intl=full-icu",
-    "server:start": "node index.js",
+    "server:start": "yarn install && node index.js",
     "storybook": "start-storybook -p 9009 -s public",
-    "build:storybook": "build-storybook -s public"
+    "build:storybook": "build-storybook -s public",
+    "playroom:start": "playroom start",
+    "playroom:build": "playroom build"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "react/jsx-no-literals": [
+        2,
+        {
+          "noStrings": false
+        }
+      ]
+    }
   },
   "browserslist": {
     "production": [
@@ -38,23 +61,22 @@
     "skipThirdPartyRequests": true
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "^5.1.9",
-    "@storybook/addon-actions": "^5.1.9",
-    "@storybook/addon-backgrounds": "^5.1.9",
-    "@storybook/addon-centered": "^5.1.9",
-    "@storybook/addon-links": "^5.1.9",
-    "@storybook/addon-notes": "^5.1.9",
-    "@storybook/addon-viewport": "^5.1.9",
-    "@storybook/addons": "^5.1.9",
-    "@storybook/react": "^5.1.9",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "@storybook/addon-a11y": "^5.1.11",
+    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-backgrounds": "^5.1.11",
+    "@storybook/addon-centered": "^5.1.11",
+    "@storybook/addon-links": "^5.1.11",
+    "@storybook/addon-notes": "^5.1.11",
+    "@storybook/addon-viewport": "^5.1.11",
+    "@storybook/addons": "^5.1.11",
+    "@storybook/react": "^5.1.11",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
-    "react-intl": "^3.0.0-beta-8",
+    "react-intl": "^3.1.8",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "^3.1.1",
     "react-snap": "^1.23.0",
-    "storybook-addon-intl": "^2.4.1",
-    "wouter": "^2.1.0"
+    "storybook-addon-intl": "^2.4.1"
   }
 }

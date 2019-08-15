@@ -1,9 +1,16 @@
 {
 	"app_name": "Київ Метро",
+	"app_languages": "Мови",
 	"app_description": "Цей додаток - спроба спростити пересування Україною. Починаючи з Київ Метро, ми плануємо додавати нові міста України та інші види транспорту.",
-	"app_language": "Мова",
 	"app_app_store_download": "Завантажити з App Store",
 	"app_app_store_link": "https://apps.apple.com/ua/app/metro-kyiv/id1469592307",
 	"app_back": "← Назад",
-	"app_home_screenshot": "/screenshots/uk/home.png"
+	"app_home_screenshot": "/screenshots/uk/home.png",
+	"app_privacy_policy": "Політика конфіденційності",
+	"app_language": "Мова",
+	"app_languages_description": "Додайте мови, які ви хотіли б\n бачити в наступній версії.",
+	"app_languages_add": "Додати",
+	"app_languages_add_placeholder": "Введіть мову",
+	"app_languages_vote": "Голосувати",
+	"app_languages_empty": "Немає пропозицій, додайте свою мову."
 }

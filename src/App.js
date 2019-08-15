@@ -1,14 +1,14 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
-
+import { Switch, Route, Redirect } from 'react-router-dom'
 import { IntlProvider } from 'react-intl'
 
-import './App.module.scss'
 import Home from './pages/Home'
-import PrivacyPolicy from './pages/PrivacyPolicy'
+import PrivacyPolicyPage from './pages/PrivacyPolicy'
 import LanguagesPage from './pages/Languages'
 
+import './App.module.scss'
 import messages from './messages'
+
 
 let userLanguage = navigator.language.slice(0, 2)
 
@@ -18,17 +18,18 @@ if (['ru', 'uk', 'en'].indexOf(userLanguage) === -1) {
 
 function App() {
 	return (
-		<IntlProvider locale={userLanguage} messages={messages[userLanguage]}>
-			<Router>
+		<IntlProvider defaultLocale={userLanguage} key={userLanguage} locale={userLanguage} messages={messages[userLanguage]}>
+			<Switch>
 				<Switch>
 					<Route exact path="/" component={Home} />
-					<Route exact path="/privacy-policy" component={PrivacyPolicy} />
+					<Route exact path="/privacy-policy" component={PrivacyPolicyPage} />
 					<Route exact path="/languages" component={LanguagesPage} />
 					<Redirect to="/" />
 				</Switch>
-			</Router>
+			</Switch>
 		</IntlProvider>
 	)
 }
+
 
 export default App

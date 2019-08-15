@@ -2,16 +2,110 @@
 
 .content {
 	padding: 1.5rem 2rem 4rem;
-	max-width: 38.75rem;
+	max-width: 24rem;
+	width: 100%;
 	margin: 0 auto;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+
+	h1 {
+		margin: 1rem 0 0;
+	}
+
+	p {
+		margin: 0.5rem 0 2rem;
+		white-space: pre-line;
+		line-height: 1.5rem;
+	}
 }
 
 .back {
 	margin: 0 auto 2.5rem;
 	top: 1.5rem;
 	position: sticky;
+}
+
+.languagesList {
+	margin-top: 1.5rem;
+	list-style: none;
+	padding: 0;
+
+	&:before {
+		content: '';
+
+	}
+}
+
+.language {
+	margin-bottom: 0.5rem;
+	text-align: left;
+	background: $white;
+	padding: 0.75rem 1rem;
+	border-radius: 0.25rem;
+	font-weight: 500;
+	box-shadow: 0 0.5rem 0.875rem rgba($black, 0.05);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&Info {
+		display: flex;
+		align-items: center;
+		flex: 1;
+		justify-content: space-between;
+		margin-right: 1rem;
+	}
+
+	&Label {
+		font-size: 0.8125rem;
+		color: $dark;
+		margin-top: 0.25rem;
+	}
+
+	&Name {
+		font-size: 1.125rem;
+	}
+
+	&Button {
+		font-size: 0.875rem;
+		background: $primary;
+		color: white;
+	}
+
+	&:hover {
+		box-shadow: 0 0.5rem 0.875rem rgba($black, 0.1);
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+
+	&Voting {
+		color: $primary;
+	}
+
+	&Vote {
+		background: rgba($primary, 0.125);
+		border-radius: 0.25rem;
+		color: $primary;
+		padding: 0.25rem 0.5rem;
+	}
+}
+
+.empty {
+	padding: 1rem 0;
+	color: $dark;
+}
+
+.form {
+	display: flex;
+	justify-content: space-between;
+}
+
+.input {
+	flex: 1;
+	margin-right: 1.5rem;
 }
