@@ -21,11 +21,11 @@ export default injectIntl(class HomePage extends Component {
 
 				<div className={styles.content}>
 					<DevicePreview>
-						<img loading="lazy" width="282" height="610" src={intl.formatMessage({ id: 'app_home_screenshot' })} alt="App screenshot" />
+						<img loading="lazy" src={intl.formatMessage({ id: 'app_home_screenshot' })} alt="App screenshot" />
 					</DevicePreview>
 
 					<div className={styles.info}>
-						<img loading="lazy" src={metro} alt="Metro icon" width="127" height="76" />
+						<img src={metro} alt="Metro icon" />
 						<h1 className={styles.heading}>
 							<FormattedMessage id="app_name" />
 						</h1>
