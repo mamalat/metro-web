@@ -26,7 +26,7 @@ storiesOf('DevicePreview', module)
 	})
 	.add('with screenshot', injectIntl(({intl}) => (
 		<DevicePreview>
-			<img src={intl.formatMessage({ id: 'app_home_screenshot' })} alt="App screenshot" />
+			<img loading="lazy" src={intl.formatMessage({ id: 'app_home_screenshot' })} alt="App screenshot" />
 		</DevicePreview>
 	)))
 

@@ -21,11 +21,11 @@ export default injectIntl(class HomePage extends Component {
 
 				<div className={styles.content}>
 					<DevicePreview>
-						<img src={intl.formatMessage({ id: 'app_home_screenshot' })} alt="App screenshot" />
+						<img loading="lazy" src={intl.formatMessage({ id: 'app_home_screenshot' })} alt="App screenshot" />
 					</DevicePreview>
 
 					<div className={styles.info}>
-						<img src={metro} alt="Metro icon" />
+						<img loading="lazy" src={metro} alt="Metro icon" />
 						<h1 className={styles.heading}>
 							<FormattedMessage id="app_name" />
 						</h1>
@@ -40,7 +40,7 @@ export default injectIntl(class HomePage extends Component {
 							className={styles.appStore}
 							href={intl.formatMessage({ id: 'app_app_store_link' })}
 						>
-							<img src={`/app-store/${intl.locale}.svg`} alt={intl.formatMessage({ id: 'app_app_store_download' })} />
+							<img loading="lazy" src={`/app-store/${intl.locale}.svg`} alt={intl.formatMessage({ id: 'app_app_store_download' })} />
 						</a>
 					</div>
 				</div>
@@ -49,7 +49,7 @@ export default injectIntl(class HomePage extends Component {
 					to="/languages"
 					className={styles.languages}
 				>
-					<img src={languages} alt={intl.formatMessage({ id: 'app_language' })} /> <FormattedMessage id="app_language" />
+					<img loading="lazy" src={languages} alt={intl.formatMessage({ id: 'app_language' })} /> <FormattedMessage id="app_language" />
 				</Link>
 
 				<Link

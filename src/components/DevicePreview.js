@@ -9,7 +9,7 @@ export default class DevicePreview extends Component {
 		return (
 			<div className={styles.device}>
 				<div className={styles.deviceScreen}>{children}</div>
-				<img src={device} className={styles.deviceBody} alt="IPhone frame" />
+				<img loading="lazy" src={device} className={styles.deviceBody} alt="IPhone frame" />
 			</div>
 		)
 	}
