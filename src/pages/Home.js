@@ -21,7 +21,7 @@ export default injectIntl(class HomePage extends Component {
 
 				<div className={styles.content}>
 					<DevicePreview>
-						<img loading="lazy" src={intl.formatMessage({ id: 'app_home_screenshot' })} alt="App screenshot" />
+						<img src={intl.formatMessage({ id: 'app_home_screenshot' })} alt="App screenshot" />
 					</DevicePreview>
 
 					<div className={styles.info}>
@@ -40,7 +40,7 @@ export default injectIntl(class HomePage extends Component {
 							className={styles.appStore}
 							href={intl.formatMessage({ id: 'app_app_store_link' })}
 						>
-							<img loading="lazy" width="120" height="40" src={`/app-store/${intl.locale}.svg`} alt={intl.formatMessage({ id: 'app_app_store_download' })} />
+							<img width="120" height="40" src={`/app-store/${intl.locale}.svg`} alt={intl.formatMessage({ id: 'app_app_store_download' })} />
 						</a>
 					</div>
 				</div>
