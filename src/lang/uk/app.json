@@ -6,6 +6,7 @@
 	"app_app_store_link": "https://apps.apple.com/ua/app/metro-kyiv/id1469592307",
 	"app_back": "← Назад",
 	"app_home_screenshot": "/screenshots/uk/home.png",
+	"app_home_screenshot_dark": "/screenshots/uk/home-dark.png",
 	"app_privacy_policy": "Політика конфіденційності",
 	"app_language": "Мова",
 	"app_languages_description": "Додайте мови, які ви хотіли б\n бачити в наступній версії.",

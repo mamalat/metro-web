@@ -4,10 +4,18 @@ import styles from './Button.module.scss'
 
 export default class Button extends Component {
 	render() {
-		const { children, className, ...rest } = this.props
+		const { children, color, size, className, ...rest } = this.props
+
+		const styleClass = classnames({
+			[styles.buttonPrimary]: color === 'primary',
+			[styles.buttonLarge]: size === 'large'
+		})
 
 		return (
-			<button className={classnames(styles.button, className)} {...rest}>
+			<button
+				className={classnames(styles.button, styleClass, className)}
+				{...rest}
+			>
 				{children}
 			</button>
 		)

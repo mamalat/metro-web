@@ -65,15 +65,19 @@
 	font-weight: 500;
 	text-underline-position: under;
 	cursor: pointer;
-	color: $black;
 	margin-bottom: 1rem;
 	display: flex;
+	color: $black;
+
+	@media (prefers-color-scheme: dark) {
+		color: $white;
+	}
 
 	&:hover {
 		text-decoration: underline;
 	}
 
-	img {
+	svg {
 		margin-right: 0.25rem;
 	}
 }

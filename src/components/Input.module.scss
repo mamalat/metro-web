@@ -8,24 +8,28 @@
 	border-radius: 0.25rem;
 	box-shadow: 0 0.5rem 0.875rem rgba($black, 0.05);
 	color: $black;
+	font-family: $font-family;
 
 	&:focus {
 		outline: rgba($primary, 0.5) 0.125rem solid;
 		box-shadow: 0 0.5rem 0.875rem rgba($primary, 0.25);
 	}
 
-	&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	&::placeholder {
+		/* Chrome, Firefox, Opera, Safari 10.1+ */
 		color: rgba($black, 0.5);
 		opacity: 1; /* Firefox */
 		font-weight: 500;
 	}
 
-	&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	&:-ms-input-placeholder {
+		/* Internet Explorer 10-11 */
 		color: rgba($black, 0.5);
 		font-weight: 500;
 	}
 
-	&::-ms-input-placeholder { /* Microsoft Edge */
+	&::-ms-input-placeholder {
+		/* Microsoft Edge */
 		color: rgba($black, 0.5);
 		font-weight: 500;
 	}

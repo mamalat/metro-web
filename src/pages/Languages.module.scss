@@ -49,6 +49,13 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	color: $black;
+
+	@media (prefers-color-scheme: dark) {
+		border: 1px solid rgba($dark, 0.25);
+		background: $box-dark;
+		color: $white;
+	}
 
 	&Info {
 		display: flex;
@@ -108,4 +115,26 @@
 .input {
 	flex: 1;
 	margin-right: 1.5rem;
+
+	@media (prefers-color-scheme: dark) {
+		border: 1px solid rgba($dark, 0.25);
+		background: $box-dark;
+		color: $white;
+
+		&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+			color: rgba($white, 0.5);
+			opacity: 1; /* Firefox */
+			font-weight: 500;
+		}
+
+		&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			color: rgba($white, 0.5);
+			font-weight: 500;
+		}
+
+		&::-ms-input-placeholder { /* Microsoft Edge */
+			color: rgba($white, 0.5);
+			font-weight: 500;
+		}
+	}
 }

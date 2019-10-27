@@ -2,7 +2,9 @@
 @import-normalize;
 
 :global {
-	html, body, .root {
+	html,
+	body,
+	.root {
 		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
@@ -12,8 +14,13 @@
 		overflow-x: hidden;
 		color: $black;
 		margin: 0;
-		font-family: 'Helvetica Neue', Helvetica;
+		font-family: $font-family;
 		background: $background;
+
+		@media (prefers-color-scheme: dark) {
+			background: $background-dark;
+			color: $white;
+		}
 	}
 
 	a {
