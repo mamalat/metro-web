@@ -20,8 +20,13 @@ const fs = require('fs')
 const options = {}
 
 if (process.env.NODE_ENV === 'production') {
-	options.key = fs.readFileSync(__dirname + '/cert/privkey1.pem')
-	options.cert = fs.readFileSync(__dirname + '/cert/cert1.pem')
+	const liveCertPath = '/cert/live/www.kyivmetro.com/'
+
+	const keyPath = fs.readlinkSync(__dirname + liveCertPath + 'privkey.pem')
+	const certPath = fs.readlinkSync(__dirname + liveCertPath + 'cert.pem')
+
+	options.key = fs.readFileSync(__dirname + liveCertPath + keyPath)
+	options.cert = fs.readFileSync(__dirname + liveCertPath + certPath)
 }
 
 const typeDefs = gql`
