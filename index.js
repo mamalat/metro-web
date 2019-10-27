@@ -76,6 +76,7 @@ const app = express()
 const redirectApp = express()
 const publicFolder = path.resolve(__dirname, 'build')
 
+server.applyMiddleware({ app })
 app.use(morgan('tiny'))
 app.use(cors())
 // parse application/x-www-form-urlencoded
@@ -90,8 +91,6 @@ app.use(express.static(publicFolder))
 app.use((req, res) => {
 	res.sendFile('index.html', { root: publicFolder })
 })
-
-server.applyMiddleware({ app })
 
 if (process.env.NODE_ENV === 'production') {
 	redirectApp.get('*', (req, res) => {
