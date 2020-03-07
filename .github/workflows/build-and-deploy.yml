@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '13.10.1'
 
-      - name: Build for staging
+      - name: Build [staging]
         # Check for staging branch
         if: github.ref != 'refs/heads/master'
         env:
@@ -25,7 +25,7 @@ jobs:
           yarn install
           yarn build
 
-      - name: Build for production
+      - name: Build [production]
         if: github.ref == 'refs/heads/master'
         env:
           NODE_ENV: production
@@ -33,3 +33,25 @@ jobs:
         run: |
           yarn install
           yarn build
+    
+      - name: Deploy [staging]
+        if: github.ref != 'refs/heads/master'
+        uses: easingthemes/ssh-deploy@v2.0.8
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.STAGING_SSH_KEY }}
+          ARGS: "-rltgoDzvO --delete"
+          REMOTE_HOST: "64.227.126.235"
+          REMOTE_USER: root
+          SOURCE: "build/"
+          TARGET: "/home/node/app/build/"
+
+      - name: Deploy [production]
+        if: github.ref == 'refs/heads/master'
+        uses: easingthemes/ssh-deploy@v2.0.8
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.STAGING_SSH_KEY }}
+          ARGS: "-rltgoDzvO --delete"
+          REMOTE_HOST: "64.227.126.235"
+          REMOTE_USER: root
+          SOURCE: "build/"
+          TARGET: "/home/node/app/build/"
