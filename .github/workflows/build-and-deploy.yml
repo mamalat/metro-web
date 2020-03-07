@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-        NODE_ENV: node_modules:src
+        SASS_PATH: node_modules:src
 
     steps:
       - uses: actions/checkout@v2
@@ -17,6 +17,7 @@ jobs:
           node-version: '13.10.1'
 
       - name: Build for staging
+        # Check for staging branch
         if: github.ref != 'refs/heads/master'
         env:
           NODE_ENV: staging
