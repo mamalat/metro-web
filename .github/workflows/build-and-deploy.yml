@@ -16,19 +16,19 @@ jobs:
         with:
           node-version: '13.10.1'
 
-      - name: Staging ENV
+      - name: Build for staging
         if: github.ref != 'refs/heads/master'
         env:
           NODE_ENV: staging
+        run: |
+          yarn install
+          yarn build
 
-      - name: Production ENV
+      - name: Build for production
         if: github.ref == 'refs/heads/master'
         env:
           NODE_ENV: production
           GENERATE_SOURCEMAP: false
-
-      - name: Install Packages
-        run: yarn install
-
-      - name: Build
-        run: yarn build
+        run: |
+          yarn install
+          yarn build
