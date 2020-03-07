@@ -25,7 +25,14 @@
     "react-router": "5.1.2",
     "react-svg": "11.0.12",
     "sass": "1.26.2",
-    "spdy": "4.0.1"
+    "spdy": "4.0.1",
+    "react": "16.13.0",
+    "react-dom": "16.13.0",
+    "react-helmet": "5.2.1",
+    "react-intl": "4.1.1",
+    "react-router-dom": "5.1.2",
+    "react-scripts": "3.4.0",
+    "react-snap": "1.23.0"
   },
   "scripts": {
     "start": "react-scripts start --with-intl=full-icu",
@@ -83,13 +90,6 @@
     "@storybook/addon-viewport": "5.3.14",
     "@storybook/addons": "5.3.14",
     "@storybook/react": "5.3.14",
-    "react": "16.13.0",
-    "react-dom": "16.13.0",
-    "react-helmet": "5.2.1",
-    "react-intl": "4.1.1",
-    "react-router-dom": "5.1.2",
-    "react-scripts": "3.4.0",
-    "react-snap": "1.23.0",
     "storybook-addon-intl": "2.4.1"
   }
 }
