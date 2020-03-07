@@ -28,7 +28,7 @@ jobs:
           GENERATE_SOURCEMAP: false
 
       - name: Install Packages
-          run: yarn install
+        run: yarn install
 
       - name: Build
         run: yarn build
