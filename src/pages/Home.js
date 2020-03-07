@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { injectIntl, FormattedMessage } from 'react-intl'
 import { Helmet } from 'react-helmet'
-import ReactSVG from 'react-svg'
+import { ReactSVG } from 'react-svg'
 
 import metro from '../media/metro.svg'
 import styles from './Home.module.scss'
